@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MediaMergerComponent } from '../app/media-merger/media-merger.component';
+import { VideoPlayerComponent } from './video-player.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [MediaMergerComponent, VideoPlayerComponent],
+  template: `
+    <app-media-merger></app-media-merger>
+    <app-video-player></app-video-player>
+  `,
 })
-export class AppComponent {
-  title = 'audio-video-merger';
-}
+export class AppComponent {}

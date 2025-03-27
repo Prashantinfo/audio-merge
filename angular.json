@@ -103,10 +103,13 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
+          "assets": [
+              "src/favicon.ico",
+              "src/assets",
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "node_modules/@ffmpeg/core/dist",
+                "output": "/assets/ffmpeg"
               }
             ],
             "styles": [
